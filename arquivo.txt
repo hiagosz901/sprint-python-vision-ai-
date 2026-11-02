@@ -1,0 +1,97 @@
+RMS
+hiago silva 572664 - 1ESPT
+juliano galhardo 572493 - 1ESPQ
+octavio melo 571811 - 1ESPF
+gabriel zambo 569883 -1ESPF
+
+
+
+
+Vision Assist AI — Guia de utilização e limitações
+O Vision Assist AI é um projeto de reconhecimento visual desenvolvido em Python, utilizando o modelo YOLOv8n para identificar objetos presentes em imagens.
+
+Seu funcionamento é local: o usuário fornece uma imagem, o programa analisa seu conteúdo e apresenta os objetos identificados diretamente no terminal.
+1. Como utilizar o sistema
+
+
+Passo 1 — Abrir o projeto
+
+Abra a pasta vision-assist-ai no VS Code.
+
+
+Passo 2 — Adicionar uma imagem
+
+Coloque a imagem que deseja analisar dentro da pasta imagens.
+
+Exemplos: cachorro.jpg, carro.png, pessoa.jpeg.
+
+
+
+Passo 3 — Executar o programa
+
+Abra o terminal e execute:
+python reconhecer.py imagens/cachorro.jpg
+
+
+Passo 4 — Visualizar o resultado
+
+O sistema apresenta no terminal os objetos encontrados, suas quantidades e os níveis de confiança.
+
+
+2. Como funciona o reconhecimento?
+O processo acontece em quatro etapas:
+1. Entrada: o usuário informa o caminho da imagem.
+2. Processamento: o OpenCV realiza a leitura da imagem.
+3. Reconhecimento: o YOLOv8n analisa a imagem e identifica possíveis objetos.
+4. Resultado: o Python organiza as detecções e apresenta as informações no terminal.
+Fluxo de funcionamento
+Imagem de entrada
+
+
+OpenCV — leitura da imagem
+
+
+YOLOv8n — reconhecimento
+
+
+Resultado no terminal
+
+
+3. Limitações do sistema
+É importante entender que o Vision Assist AI ainda possui limitações técnicas.
+Limitação	Explicação
+Categorias limitadas	O YOLOv8n padrão reconhece 80 categorias do COCO.
+Confusão entre objetos	Pode confundir animais ou objetos visualmente semelhantes, como um tigre e um gato.
+Qualidade da imagem	Fotos borradas, escuras ou com baixa resolução podem prejudicar o reconhecimento.
+Objetos pequenos	Pode não identificar objetos muito distantes ou pequenos.
+Contexto limitado	Não compreende completamente situações, ações ou relações entre objetos.
+Dependência do modelo	A precisão depende do treinamento e das categorias conhecidas pelo YOLO.
+Sem interpretação de áudio	A versão atual não possui descrição por voz.
+
+4. O que o sistema ainda não faz?
+Na versão atual, o projeto:
+- Não utiliza câmera em tempo real.
+- Não conversa com o usuário.
+- Não descreve cenas de maneira completa.
+- Não identifica todos os objetos existentes no ambiente.
+- Não possui saída por voz.
+- Não substitui recursos de orientação e mobilidade para pessoas com deficiência visual.
+5. Possíveis melhorias futuras
+Para evoluir o Vision Assist AI, podemos implementar:
+- Reconhecimento personalizado: adicionar categorias como tigres, leões e onças.
+- Descrição de cenas: explicar melhor o ambiente e a posição dos objetos.
+- Reconhecimento em tempo real: utilizar a câmera para analisar o ambiente.
+- Assistente por voz: transformar os resultados em descrições faladas.
+- Distância dos objetos: estimar se algo está próximo ou distante, com técnicas adicionais.
+6. Tecnologias utilizadas
+Tecnologia	Função
+Python	Linguagem principal
+YOLOv8n	Detecção e classificação de objetos
+OpenCV	Leitura e processamento de imagens
+NumPy	Manipulação de dados e matrizes
+PyTorch	Execução do modelo de inteligência artificial
+
+
+Conclusão: o Vision Assist AI atualmente é um protótipo de reconhecimento visual por imagens. Ele já consegue identificar objetos de diversas categorias, mas ainda precisa evoluir em precisão, interpretação de ambientes e acessibilidade para cumprir seu objetivo de auxiliar pessoas com deficiência visual.
+
+Uma recomendação importante para a apresentação: deixe claro que o sistema é uma primeira versão funcional e que o reconhecimento de objetos é apenas uma das etapas necessárias para construir um assistente visual acessível.
